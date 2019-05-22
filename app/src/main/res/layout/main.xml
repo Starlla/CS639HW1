@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragment"
+        class="com.pace.cs639spring.hw1.AnimalDisplayFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.1"
+        android:layout_marginStart="5dp"
+        tools:layout="@layout/animal_display" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.9">
+
+        <Button
+            android:id="@+id/rotateButton"
+            android:layout_width="80dp"
+            android:layout_height='40dp'
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:text="@string/rotate" />
+
+        <Button
+            android:id="@+id/flipButton"
+            android:layout_width="80dp"
+            android:layout_height='40dp'
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/rotateButton"
+            android:layout_marginStart="10dp"
+            android:text="@string/flip" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            >
+
+            <ImageView
+                android:id="@+id/vectorCenter"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/arrowBack"
+                android:src="@drawable/ic_filter_center_focus_black_24dp" />
+
+
+            <ImageView
+                android:id="@+id/arrowBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+            <ImageView
+                android:id="@+id/arrowForward"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/vectorCenter"
+                android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+
+            <ImageView
+                android:id="@+id/arrowUpward"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_above="@id/vectorCenter"
+                android:layout_alignStart="@id/vectorCenter"
+                android:src="@drawable/ic_arrow_upward_black_24dp" />
+
+            <ImageView
+                android:id="@+id/arrowDownward"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/vectorCenter"
+                android:layout_alignStart="@id/vectorCenter"
+                android:src="@drawable/ic_arrow_downward_black_24dp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
